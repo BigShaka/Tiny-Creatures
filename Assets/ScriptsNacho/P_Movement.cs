@@ -60,6 +60,7 @@ public class P_Movement : MonoBehaviour
     {
         walking,
         sprinting,
+        wallRunning,
         crouching,
         sliding,
         air
@@ -130,6 +131,13 @@ public class P_Movement : MonoBehaviour
 
     private void StateHandler()
     {
+        //Mode - Wallrunning
+        if (wallrunning)
+        {
+            state = MovementState.wallRunning;
+            desiredMoveSpeed = wallRunningSpeed;
+        }
+
         // Mode - Sliding
         if (sliding)
         {
