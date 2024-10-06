@@ -8,8 +8,8 @@ public class Laser : MonoBehaviour
     public Transform cameraOrientation; // Referencia a la orientación de la cámara
     public GameObject laserPointer; // El objeto invisible que seguirá la punta del láser
     public float laserRange = 100f;
-    public KeyCode laserKey = KeyCode.Mouse0; // Tecla para activar el láser
-
+    public KeyCode laserKey = KeyCode.Mouse0;
+    public bool isLaserUnlocked = false;
     private LineRenderer laserLine;
     private bool isLaserActive;
 
@@ -21,24 +21,30 @@ public class Laser : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(laserKey))
+        if(isLaserUnlocked == true)
         {
-            ActivateLaser();
-        }
+            Debug.Log($laserKey);
+            if (Input.GetKeyDown(laserKey))
+            {
+                Debug.Log("Funciono");
+                ActivateLaser();
+            }
 
-        if (Input.GetKeyUp(laserKey))
-        {
-            DeactivateLaser();
-        }
+            if (Input.GetKeyUp(laserKey))
+            {
+                DeactivateLaser();
+            }
 
-        if (isLaserActive)
-        {
-            UpdateLaser();
-        }
+            if (isLaserActive)
+            {
+                UpdateLaser();
+            }
+        }    
     }
 
     private void ActivateLaser()
     {
+        Debug.Log("FuncionoA");
         isLaserActive = true;
         laserLine.enabled = true;
         laserPointer.SetActive(true);
@@ -68,5 +74,9 @@ public class Laser : MonoBehaviour
             laserLine.SetPosition(1, cameraPosition.position + cameraOrientation.forward * laserRange);
             laserPointer.transform.position = cameraPosition.position + cameraOrientation.forward * laserRange;
         }
+    }
+        public void UnlockLaser()
+    {
+        isLaserUnlocked = true;
     }
 }

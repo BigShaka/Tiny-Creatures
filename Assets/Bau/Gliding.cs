@@ -9,6 +9,7 @@ public class Gliding : MonoBehaviour
     public float glideSpeed = 5f;
     public float glideDrag = 1f;
     public float glideGravityScale = 0.5f;
+    public bool isGlidingUnlocked = false;
 
     private Rigidbody rb;
     private bool isGliding;
@@ -61,4 +62,9 @@ public class Gliding : MonoBehaviour
         // Simulacion de planecion
         rb.AddForce(Vector3.down * glideGravityScale, ForceMode.Acceleration);
     }
+        public void UnlockGliding()
+    {
+        isGlidingUnlocked = true;
+    }
+
 }
