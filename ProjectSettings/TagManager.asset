@@ -8,10 +8,10 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - boid
   - Water
   - UI
-  - 
+  - obstacle
   - whatIsGround
   - whatIsWall
   - whatIsStair
