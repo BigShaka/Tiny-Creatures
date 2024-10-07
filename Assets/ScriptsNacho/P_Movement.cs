@@ -324,4 +324,12 @@ public class P_Movement : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         yield return this;
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.layer == 13)
+        {
+            StartCoroutine(Death());
+        }
+    }
 }

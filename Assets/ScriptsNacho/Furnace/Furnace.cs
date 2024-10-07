@@ -6,6 +6,8 @@ public class Furnace : MonoBehaviour
 {
     bool _ON = false;
 
+    public GameObject furnace;
+
     public float timeON;
     public float timeOFF;
     float _timer = 0;
@@ -16,6 +18,7 @@ public class Furnace : MonoBehaviour
     }
     private void Update()
     {
+        furnace.SetActive(_ON);
         if (_timer > 0)
         {
             _timer -= Time.deltaTime;
@@ -46,6 +49,7 @@ public class Furnace : MonoBehaviour
             if (_ON)
             {
                 player.Death();
+
             }
             else
             {
