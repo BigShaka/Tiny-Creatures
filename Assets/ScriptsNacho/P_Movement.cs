@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class P_Movement : MonoBehaviour
 {
@@ -148,6 +149,7 @@ public class P_Movement : MonoBehaviour
             desiredMoveSpeed = wallRunningSpeed;
         }
 
+       
         // Mode - Sliding
         if (sliding)
         {
@@ -311,7 +313,7 @@ public class P_Movement : MonoBehaviour
 
     public IEnumerator Death()
     {
-        print("muere");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         yield return this;
     }
 }
