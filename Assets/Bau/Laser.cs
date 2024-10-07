@@ -24,13 +24,13 @@ public class Laser : MonoBehaviour
         if(isLaserUnlocked == true)
         {
             Debug.Log(laserKey);
-            if (Input.GetKeyDown(laserKey))
+            if (Input.GetMouseButtonDown(0))
             {
                 Debug.Log("Funciono");
                 ActivateLaser();
             }
 
-            if (Input.GetKeyUp(laserKey))
+            if (Input.GetMouseButtonUp(0))
             {
                 DeactivateLaser();
             }

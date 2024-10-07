@@ -10,7 +10,8 @@ public class SaveData
 [System.Serializable]
 public struct PlayerData
 {
-    public int cosas;
+    public bool glidingUnlocked;
+    public bool laserUnlocked;
     public Vector3 lastPosition;
     public Quaternion lastRotation;
 }

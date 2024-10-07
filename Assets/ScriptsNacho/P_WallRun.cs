@@ -108,19 +108,19 @@ public class P_WallRun : MonoBehaviour
         //State 2
         else if (exitingWall)
         {
+            print(pm.wallrunning);
             if (pm.wallrunning)
             {
                 StopWallRun();
+            }
                 if (exitWallTimer > 0)
                 {
                     exitWallTimer -= Time.deltaTime;
                 }
                 else
                 {
-                    print(pm.wallrunning);
                     exitingWall = false;
                 }
-            }
         }
 
         // State 3 - None
