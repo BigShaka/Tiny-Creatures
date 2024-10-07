@@ -246,6 +246,11 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 1020994749997609947}
+    - target: {fileID: 1694456476638430120, guid: 2064f85d8a03ffd48b61ee6d88c62444,
+        type: 3}
+      propertyPath: wallJumpSideForce
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 4396388674613583808, guid: 2064f85d8a03ffd48b61ee6d88c62444,
         type: 3}
       propertyPath: m_Name
@@ -254,17 +259,17 @@ PrefabInstance:
     - target: {fileID: 7571184764069202097, guid: 2064f85d8a03ffd48b61ee6d88c62444,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.9
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7571184764069202097, guid: 2064f85d8a03ffd48b61ee6d88c62444,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.98
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7571184764069202097, guid: 2064f85d8a03ffd48b61ee6d88c62444,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7571184764069202097, guid: 2064f85d8a03ffd48b61ee6d88c62444,
         type: 3}

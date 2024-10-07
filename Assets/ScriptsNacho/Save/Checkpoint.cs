@@ -21,7 +21,6 @@ public class Checkpoint : MonoBehaviour
             SaveGameManager.CurrentSaveData.PlayerData.lastRotation = other.transform.rotation;
             SaveGameManager.SaveGame();
 
-            print(SaveGameManager.CurrentSaveData.PlayerData);
         }
     }
 }

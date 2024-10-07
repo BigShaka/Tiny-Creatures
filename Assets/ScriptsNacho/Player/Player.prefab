@@ -45,6 +45,9 @@ GameObject:
   - component: {fileID: 3945008288603869498}
   - component: {fileID: 6139892145479515681}
   - component: {fileID: 1694456476638430120}
+  - component: {fileID: 1596246627058799961}
+  - component: {fileID: 3778009871644294497}
+  - component: {fileID: 810957830298005109}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -152,6 +155,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   maxSlopeAngle: 10
+  death: 0
   orientation: {fileID: 3710749344749365836}
   state: 0
   sliding: 0
@@ -207,6 +211,58 @@ MonoBehaviour:
   gravityCounterForce: 20
   orientation: {fileID: 3710749344749365836}
   cam: {fileID: 0}
+--- !u!114 &1596246627058799961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4396388674613583808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb22e12419d33d4f8f213914ca097c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactKey: 101
+  interactionRange: 2
+  interactableLayer:
+    serializedVersion: 2
+    m_Bits: 1024
+--- !u!114 &3778009871644294497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4396388674613583808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 522ba327b5a39014b872c96ea667e7d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraPosition: {fileID: 3449658623765269897}
+  cameraOrientation: {fileID: 3710749344749365836}
+  laserPointer: {fileID: 0}
+  laserRange: 100
+  laserKey: 316
+  isLaserUnlocked: 0
+--- !u!114 &810957830298005109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4396388674613583808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5c3975690be3ee4d8158d0d093e87e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  glideKey: 308
+  glideSpeed: 5
+  glideDrag: 1
+  glideGravityScale: 0.5
+  isGlidingUnlocked: 0
 --- !u!1 &6903302399232085136
 GameObject:
   m_ObjectHideFlags: 0
