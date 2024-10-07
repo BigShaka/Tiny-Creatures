@@ -45,6 +45,8 @@ public class P_Movement : MonoBehaviour
     private RaycastHit slopeHit;
     private bool exitingSlope;
 
+    public bool death = false;
+
 
     public Transform orientation;
 
@@ -77,6 +79,7 @@ public class P_Movement : MonoBehaviour
         readyToJump = true;
 
         startYScale = transform.localScale.y;
+        death = false;
     }
 
     private void Update()
@@ -93,6 +96,13 @@ public class P_Movement : MonoBehaviour
             rb.drag = groundDrag;
         else
             rb.drag = 0;
+
+        if (death)
+        {
+            StartCoroutine(Death());
+            death = false;
+        }
+
     }
 
     private void FixedUpdate()
@@ -297,5 +307,11 @@ public class P_Movement : MonoBehaviour
     public Vector3 GetSlopeMoveDirection(Vector3 direction)
     {
         return Vector3.ProjectOnPlane(direction, slopeHit.normal).normalized;
+    }
+
+    public IEnumerator Death()
+    {
+        print("muere");
+        yield return this;
     }
 }

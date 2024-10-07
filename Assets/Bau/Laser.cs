@@ -23,7 +23,7 @@ public class Laser : MonoBehaviour
     {
         if(isLaserUnlocked == true)
         {
-            Debug.Log($laserKey);
+            Debug.Log(laserKey);
             if (Input.GetKeyDown(laserKey))
             {
                 Debug.Log("Funciono");
