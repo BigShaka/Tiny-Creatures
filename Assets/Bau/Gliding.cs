@@ -21,14 +21,17 @@ public class Gliding : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(glideKey))
+        if (isGlidingUnlocked == true)
         {
-            StartGliding();
-        }
+            if (Input.GetKeyDown(glideKey))
+            {
+                StartGliding();
+            }
 
-        if (Input.GetKeyUp(glideKey))
-        {
-            StopGliding();
+            if (Input.GetKeyUp(glideKey))
+            {
+                StopGliding();
+            }
         }
     }
 
