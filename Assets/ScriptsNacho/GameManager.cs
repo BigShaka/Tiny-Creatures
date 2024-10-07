@@ -14,9 +14,6 @@ public class GameManager : MonoBehaviour
 
         PlayerData = SaveGameManager.CurrentSaveData.PlayerData;
 
-        print(PlayerData.lastPosition);
-        print(PlayerData.lastRotation);
-
         gliding.isGlidingUnlocked = PlayerData.glidingUnlocked;
         laser.isLaserUnlocked = PlayerData.laserUnlocked;
         gliding.gameObject.transform.position = PlayerData.lastPosition;
