@@ -11,6 +11,7 @@ public class P_Movement : MonoBehaviour
     public float sprintSpeed;
     public float slideSpeed;
     public float wallRunningSpeed;
+    public float climbSpeed;
 
     private float desiredMoveSpeed;
     private float lastDesiredMoveSpeed;
@@ -64,6 +65,7 @@ public class P_Movement : MonoBehaviour
         walking,
         sprinting,
         wallRunning,
+        climbing,
         crouching,
         sliding,
         air
@@ -71,6 +73,7 @@ public class P_Movement : MonoBehaviour
 
     public bool sliding;
     public bool wallrunning;
+    public bool climbing;
 
     private void Start()
     {
@@ -149,6 +152,12 @@ public class P_Movement : MonoBehaviour
             desiredMoveSpeed = wallRunningSpeed;
         }
 
+        if (climbing)
+        {
+            state = MovementState.climbing;
+            desiredMoveSpeed = climbSpeed;
+        }
+
        
         // Mode - Sliding
         if (sliding)
@@ -182,7 +191,6 @@ public class P_Movement : MonoBehaviour
             state = MovementState.walking;
             desiredMoveSpeed = walkSpeed;
         }
-
         // Mode - Air
         else
         {

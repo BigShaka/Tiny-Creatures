@@ -248,8 +248,18 @@ PrefabInstance:
       objectReference: {fileID: 1020994749997609947}
     - target: {fileID: 1694456476638430120, guid: 2064f85d8a03ffd48b61ee6d88c62444,
         type: 3}
+      propertyPath: useGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1694456476638430120, guid: 2064f85d8a03ffd48b61ee6d88c62444,
+        type: 3}
       propertyPath: wallJumpSideForce
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3945008288603869498, guid: 2064f85d8a03ffd48b61ee6d88c62444,
+        type: 3}
+      propertyPath: climbSpeed
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4396388674613583808, guid: 2064f85d8a03ffd48b61ee6d88c62444,
         type: 3}
@@ -309,7 +319,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4396388674613583808, guid: 2064f85d8a03ffd48b61ee6d88c62444,
+        type: 3}
+      insertIndex: 4
+      addedObject: {fileID: 1114480256976506685}
   m_SourcePrefab: {fileID: 100100000, guid: 2064f85d8a03ffd48b61ee6d88c62444, type: 3}
 --- !u!4 &2696542932269209242 stripped
 Transform:
@@ -317,6 +331,33 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1590669368611814614}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &3103030068827857686 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4396388674613583808, guid: 2064f85d8a03ffd48b61ee6d88c62444,
+    type: 3}
+  m_PrefabInstance: {fileID: 1590669368611814614}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1114480256976506685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3103030068827857686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a86044820b852294282279203540053d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  whatIsStair:
+    serializedVersion: 2
+    m_Bits: 512
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 128
+  orientation: {fileID: 2696542932269209242}
+  stairCheckDistance: 0.7
+  minJumpHeight: 0
 --- !u!4 &4164870199064392031 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3449658623765269897, guid: 2064f85d8a03ffd48b61ee6d88c62444,
